@@ -1,475 +1,475 @@
+<div align="center">
+
 # 🏨 Hotel Management System
 
-A full-stack **Hotel Management System** built using **Node.js, Express.js, PostgreSQL, HTML, CSS, and JavaScript**. This project provides REST APIs for managing hotels, branches, rooms, guests, reservations, employees, services, billing, housekeeping, maintenance, and more.
+### A Modern Full Stack Hotel Management System
+
+<img src="https://img.shields.io/badge/Node.js-20.x-green?style=for-the-badge&logo=node.js">
+<img src="https://img.shields.io/badge/Express.js-Backend-black?style=for-the-badge&logo=express">
+<img src="https://img.shields.io/badge/PostgreSQL-Neon-blue?style=for-the-badge&logo=postgresql">
+<img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-orange?style=for-the-badge">
 
 ---
 
-# 📌 Features
+A complete **Hotel Management System** developed using **Node.js**, **Express.js**, **PostgreSQL (Neon Database)**, and **Vanilla JavaScript**.
 
-- Hotel Management
-- Branch Management
-- Room Type Management
-- Room Management
-- Guest Management
-- Reservation Management
-- Check-In Management
-- Check-Out Management
-- Payment Management
-- Billing System
-- Employee Management
-- Department Management
-- Service Management
-- Guest Service Requests
-- Housekeeping Management
-- Maintenance Management
+Designed to simplify hotel operations by managing hotels, branches, rooms, reservations, guests, employees, billing, housekeeping, maintenance, payments, and services through RESTful APIs.
+
+</div>
+
+---
+
+# 📸 Preview
+
+> Dashboard showing hotel analytics, reservations, room management, payments, and more.
+
+*(Add screenshots here later)*
+
+---
+
+# ✨ Features
+
+### 🏨 Hotel Management
+- Create Hotel
+- Update Hotel
+- Delete Hotel
+- View Hotels
+
+### 🌍 Branch Management
+- Multiple Branch Support
+- Branch Information
+- Branch CRUD
+
+### 🛏 Room Management
+- Room Types
+- Room Availability
+- Room Status
+- Room CRUD
+
+### 👤 Guest Management
+- Register Guests
+- Update Guest Details
+- Search Guests
+- Delete Guests
+
+### 📅 Reservation System
+- Book Rooms
+- Cancel Reservations
+- Reservation History
+- Check Availability
+
+### 💳 Payment Management
+- Payment Records
+- Multiple Payment Methods
+- Payment History
+
+### 🧾 Billing System
+- Generate Bills
+- Service Charges
+- Room Charges
+- Taxes
+
+### 👨‍💼 Employee Management
+- Employee Records
+- Departments
+- Salary Information
+
+### 🧹 Housekeeping
+- Cleaning Schedule
+- Room Status
+- Staff Assignment
+
+### 🔧 Maintenance
+- Maintenance Requests
+- Issue Tracking
+- Repair Status
+
+### 🛎 Guest Services
+- Service Requests
+- Room Service
+- Additional Services
 
 ---
 
 # 🛠 Tech Stack
 
-### Backend
-- Node.js
-- Express.js
-- PostgreSQL
-- pg
-- dotenv
-- cors
-
-### Frontend
-- HTML
-- CSS
-- JavaScript
+| Technology | Purpose |
+|------------|---------|
+| 🟢 Node.js | Backend Runtime |
+| ⚡ Express.js | REST API |
+| 🐘 PostgreSQL | Database |
+| ☁️ Neon DB | Cloud Database |
+| 🌐 HTML5 | Frontend |
+| 🎨 CSS3 | Styling |
+| ⚙️ JavaScript | Frontend Logic |
 
 ---
 
-# 📂 Project Structure
+# 📁 Project Structure
 
 ```
-hotelmanagementsystem/
+HotelManagementSystem
 │
-├── Api/
-│   ├── routes/
+├── Api
+│   │
+│   ├── routes
+│   ├── controllers
 │   ├── db.js
 │   ├── server.js
 │   ├── package.json
-│   ├── .env
-│   └── node_modules/
+│   ├── package-lock.json
+│   └── .env
 │
-└── Frontend/
-    ├── index.html
-    ├── login.html
-    ├── pages/
-    ├── css/
-    └── js/
+├── Frontend
+│   │
+│   ├── index.html
+│   ├── login.html
+│   ├── css
+│   ├── js
+│   ├── images
+│   └── pages
+│
+└── README.md
 ```
 
 ---
 
-# 📦 Installation
+# 🚀 Getting Started
 
-## 1. Clone Repository
+## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/hotelmanagementsystem.git
+git clone https://github.com/yourusername/HotelManagementSystem.git
 ```
 
 or simply download the ZIP.
 
 ---
 
-## 2. Go to API Folder
+## 2️⃣ Open Project
 
 ```bash
-cd hotelmanagementsystem/Api
+cd HotelManagementSystem
 ```
 
 ---
 
-## 3. Install Dependencies
+## 3️⃣ Install Dependencies
 
 ```bash
 npm install
 ```
 
+This installs all required Node packages.
+
 ---
 
-## 4. Create .env File
+## 4️⃣ Configure Environment Variables
+
+Create a **.env** file inside the **Api** folder.
+
+```env
+DATABASE_URL=your_neon_database_connection_string
+
+PORT=5000
+```
 
 Example
 
 ```env
-DB_USER=postgres
-DB_HOST=localhost
-DB_NAME=hotel_management
-DB_PASSWORD=yourpassword
-DB_PORT=5432
+DATABASE_URL=postgresql://username:password@ep-example.us-east-2.aws.neon.tech/hoteldb?sslmode=require
 
 PORT=5000
 ```
 
 ---
 
-## 5. Start PostgreSQL
+## ☁️ Neon PostgreSQL Database
 
-Make sure PostgreSQL is running.
+This project uses **Neon PostgreSQL Cloud Database**.
 
----
-
-## 6. Import Database
-
-Run your SQL schema and insert scripts.
-
-Example
-
-```sql
-hotel_management.sql
-```
+Simply copy your connection string from your Neon Dashboard and paste it inside your `.env` file.
 
 ---
 
-## 7. Run Server
+## ▶️ Run Server
+
+Move inside the API folder
 
 ```bash
-npm start
+cd Api
 ```
 
-Server starts on
-
-```
-http://localhost:5000
-```
-
----
-
-# Development
-
-If you use nodemon
+Run the server
 
 ```bash
-npx nodemon server.js
+node server.js
 ```
 
-or
+If everything is configured correctly you will see
 
-```bash
-nodemon server.js
+```
+Server running on port 5000
+Connected to Neon PostgreSQL Database
 ```
 
 ---
 
-# Available NPM Scripts
+## 🌐 Open Frontend
 
-Start server
+Simply open
 
-```bash
-npm start
+```
+Frontend/index.html
 ```
 
-Install packages
+or use
+
+**VS Code Live Server**
+
+---
+
+# 📦 Install Required Packages
+
+```bash
+npm install express
+```
+
+```bash
+npm install pg
+```
+
+```bash
+npm install cors
+```
+
+```bash
+npm install dotenv
+```
+
+Install all at once
+
+```bash
+npm install express pg cors dotenv
+```
+
+---
+
+# 📂 API Endpoints
+
+| Module | CRUD |
+|---------|------|
+| 🏨 Hotels | ✅ |
+| 🌍 Branches | ✅ |
+| 🛏 Rooms | ✅ |
+| 📦 Room Types | ✅ |
+| 👤 Guests | ✅ |
+| 📅 Reservations | ✅ |
+| 💳 Payments | ✅ |
+| 🧾 Bills | ✅ |
+| 👨‍💼 Employees | ✅ |
+| 🏢 Departments | ✅ |
+| 🛎 Services | ✅ |
+| 🧹 Housekeeping | ✅ |
+| 🔧 Maintenance | ✅ |
+| ✔ Check-In | ✅ |
+| ✔ Check-Out | ✅ |
+
+---
+
+# 🔥 Example API
+
+### Get Hotels
+
+```
+GET /api/hotels
+```
+
+### Get Hotel by ID
+
+```
+GET /api/hotels/:id
+```
+
+### Create Hotel
+
+```
+POST /api/hotels
+```
+
+### Update Hotel
+
+```
+PUT /api/hotels/:id
+```
+
+### Delete Hotel
+
+```
+DELETE /api/hotels/:id
+```
+
+*(Every module follows the same CRUD structure.)*
+
+---
+
+# 💻 Available Commands
+
+## Install Packages
 
 ```bash
 npm install
 ```
 
-Install a new package
+---
+
+## Start Server
+
+```bash
+node server.js
+```
+
+---
+
+## Install New Package
 
 ```bash
 npm install package-name
 ```
 
-Install dev dependency
+---
+
+## Remove Package
 
 ```bash
-npm install --save-dev package-name
+npm uninstall package-name
 ```
 
 ---
 
-# REST API Endpoints
-
-## Hotel
-
-```
-GET     /api/hotels
-GET     /api/hotels/:id
-POST    /api/hotels
-PUT     /api/hotels/:id
-DELETE  /api/hotels/:id
-```
-
----
-
-## Branch
-
-```
-GET     /api/branches
-GET     /api/branches/:id
-POST    /api/branches
-PUT     /api/branches/:id
-DELETE  /api/branches/:id
-```
-
----
-
-## Room Types
-
-```
-GET     /api/roomtypes
-GET     /api/roomtypes/:id
-POST    /api/roomtypes
-PUT     /api/roomtypes/:id
-DELETE  /api/roomtypes/:id
-```
-
----
-
-## Rooms
-
-```
-GET     /api/rooms
-GET     /api/rooms/:id
-POST    /api/rooms
-PUT     /api/rooms/:id
-DELETE  /api/rooms/:id
-```
-
----
-
-## Guests
-
-```
-GET     /api/guests
-GET     /api/guests/:id
-POST    /api/guests
-PUT     /api/guests/:id
-DELETE  /api/guests/:id
-```
-
----
-
-## Reservations
-
-```
-GET     /api/reservation
-GET     /api/reservation/:id
-POST    /api/reservation
-PUT     /api/reservation/:id
-DELETE  /api/reservation/:id
-```
-
----
-
-## Check-In
-
-```
-GET     /api/checkins
-GET     /api/checkins/:id
-POST    /api/checkins
-PUT     /api/checkins/:id
-DELETE  /api/checkins/:id
-```
-
----
-
-## Check-Out
-
-```
-GET     /api/checkouts
-GET     /api/checkouts/:id
-POST    /api/checkouts
-PUT     /api/checkouts/:id
-DELETE  /api/checkouts/:id
-```
-
----
-
-## Payments
-
-```
-GET     /api/payments
-GET     /api/payments/:id
-POST    /api/payments
-PUT     /api/payments/:id
-DELETE  /api/payments/:id
-```
-
----
-
-## Bills
-
-```
-GET     /api/bills
-GET     /api/bills/:id
-POST    /api/bills
-PUT     /api/bills/:id
-DELETE  /api/bills/:id
-```
-
----
-
-## Employees
-
-```
-GET     /api/employees
-GET     /api/employees/:id
-POST    /api/employees
-PUT     /api/employees/:id
-DELETE  /api/employees/:id
-```
-
----
-
-## Departments
-
-```
-GET     /api/departments
-GET     /api/departments/:id
-POST    /api/departments
-PUT     /api/departments/:id
-DELETE  /api/departments/:id
-```
-
----
-
-## Services
-
-```
-GET     /api/services
-GET     /api/services/:id
-POST    /api/services
-PUT     /api/services/:id
-DELETE  /api/services/:id
-```
-
----
-
-## Guest Services
-
-```
-GET     /api/guestservices
-GET     /api/guestservices/:id
-POST    /api/guestservices
-PUT     /api/guestservices/:id
-DELETE  /api/guestservices/:id
-```
-
----
-
-## Housekeeping
-
-```
-GET     /api/housekeeping
-GET     /api/housekeeping/:id
-POST    /api/housekeeping
-PUT     /api/housekeeping/:id
-DELETE  /api/housekeeping/:id
-```
-
----
-
-## Maintenance
-
-```
-GET     /api/maintenance
-GET     /api/maintenance/:id
-POST    /api/maintenance
-PUT     /api/maintenance/:id
-DELETE  /api/maintenance/:id
-```
-
----
-
-# HTTP Status Codes
-
-| Code | Meaning |
-|------|---------|
-|200|Success|
-|201|Created|
-|400|Bad Request|
-|404|Not Found|
-|500|Internal Server Error|
-
----
-
-# Common Commands
-
-### Install Everything
-
-```bash
-npm install
-```
-
-### Run Server
-
-```bash
-npm start
-```
-
-### Run with Nodemon
-
-```bash
-npx nodemon server.js
-```
-
-### Check Installed Packages
+## List Installed Packages
 
 ```bash
 npm list
 ```
 
-### Update Packages
+---
+
+## Update Packages
 
 ```bash
 npm update
 ```
 
-### Remove node_modules
+---
+
+## Check Node Version
 
 ```bash
-rm -rf node_modules
-```
-
-Windows
-
-```cmd
-rmdir /s node_modules
-```
-
-### Reinstall Packages
-
-```bash
-npm install
+node -v
 ```
 
 ---
 
-# Dependencies
+## Check NPM Version
 
-```
-express
-pg
-cors
-dotenv
-nodemon
+```bash
+npm -v
 ```
 
 ---
 
-# Database
+# 📊 Database
 
-- PostgreSQL
+Database Provider
+
+> ☁️ Neon PostgreSQL
+
+Features
+
 - Primary Keys
 - Foreign Keys
 - Constraints
+- Relationships
 - CRUD Operations
-- Joins
-- Views (optional)
-- Stored Procedures (optional)
+- SQL Joins
+- Normalized Schema
 
 ---
 
+# 🔒 Environment Variables
+
+```
+DATABASE_URL=
+
+PORT=
+```
+
+Never commit your `.env` file.
+
 ---
 
-# License
+# 📈 Future Improvements
 
-This project is for educational purposes.
+- 🔐 JWT Authentication
+- 👨‍💼 Admin Dashboard
+- 📊 Charts & Analytics
+- 📄 PDF Invoice Generation
+- 📧 Email Notifications
+- 📱 Responsive Mobile UI
+- 🔍 Advanced Search
+- 📂 Image Uploads
+- 📥 Export Reports
+- 🌙 Dark Mode
+
+---
+
+# 🤝 Contributing
+
+1. Fork the repository
+
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# 👨‍💻 Author
+
+**Muhammad Ayaan**
+
+SZABIST University
+
+Full Stack Developer
+
+---
+
+# ⭐ Support
+
+If you found this project helpful,
+
+**⭐ Star the repository on GitHub!**
+
+---
+
+<div align="center">
+
+Made with ❤️ using Node.js, Express.js & Neon PostgreSQL
+
+</div>
